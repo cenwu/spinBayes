@@ -3,27 +3,44 @@
 
 # spinBayes
 
+> **S**emi-**p**arametric GxE **In**teraction via **Bayes**ian Variable
+> Selection
+
 <!-- badges: start -->
 
 [![Travis build
 status](https://travis-ci.org/jrhub/spinBayes.svg?branch=master)](https://travis-ci.org/jrhub/spinBayes)
+[![CRAN](https://www.r-pkg.org/badges/version/spinBayes)](https://cran.r-project.org/package=spinBayes)
+[![Codecov test
+coverage](https://codecov.io/gh/jrhub/spinBayes/branch/master/graph/badge.svg)](https://codecov.io/gh/jrhub/spinBayes?branch=master)
 <!-- badges: end -->
-<!-- [![CRAN](https://www.r-pkg.org/badges/version/regnet)](https://cran.r-project.org/package=regnet) -->
 
 Many complex diseases are known to be affected by the interactions
 between genetic variants and environmental exposures beyond the main
-genetic and environmental effects. Existing Bayesian methods for G×E
-interaction studies are challenged by the high-dimensional nature of the
-study and the complexity of environmental influences. We have developed
-a novel and powerful semi-parametric Bayesian variable selection method
-that can accommodate linear and nonlinear G×E interactions
-simultaneously. Furthermore, the proposed method can conduct structural
-identification by distinguishing nonlinear interactions from main
-effects only case within Bayesian framework. Spike-and-slab priors are
-incorporated on both individual and group level to shrink coefficients
-corresponding to irrelevant main and interaction effects to zero
-exactly. The MCMC algorithms of the proposed and alternative methods are
-efficiently implemented in C++.
+genetic and environmental effects. Existing Bayesian methods for
+gene-environment (G×E) interaction studies are challenged by the
+high-dimensional nature of the study and the complexity of environmental
+influences. We have developed a novel and powerful semi-parametric
+Bayesian variable selection method that can accommodate linear and
+nonlinear G×E interactions simultaneously ([Ren et
+al. (2019)](https://arxiv.org/abs/1906.01057)). Furthermore, the
+proposed method can conduct structural identification by distinguishing
+nonlinear interactions from main effects only case within Bayesian
+framework. Spike-and-slab priors are incorporated on both individual and
+group level to shrink coefficients corresponding to irrelevant main and
+interaction effects to zero exactly. The Markov chain Monte Carlo
+algorithms of the proposed and alternative methods are efficiently
+implemented in C++.
+
+## Features
+
+  - BVCfit() integrates five different models for G×E Bayesian variable
+    selection. <!-- + sparse --> <!-- + VC --> <!-- + structural -->
+  - Generic functions BVSelection() and predict() make the workflow very
+    simple (see ‘Examples’).
+  - Highly efficient c++ implementation for MCMC algorithm.
+  - Testing coverage \>80% [![Codecov test
+    coverage](https://codecov.io/gh/jrhub/spinBayes/branch/master/graph/badge.svg)](https://codecov.io/gh/jrhub/spinBayes?branch=master)
 
 ## How to install
 
@@ -34,13 +51,15 @@ efficiently implemented in C++.
     install.packages("devtools")
     devtools::install_github("jrhub/spinBayes")
 
-<!-- * Released versions of regnet are available on R CRAN [(link)](https://cran.r-project.org/package=regnet), and can be installed within R via -->
+  - Released versions of spinBayes are available on CRAN
+    <!-- [(link)](https://cran.r-project.org/package=spinBayes) --> ,
+    and can be installed within R via
 
-<!-- ``` -->
+<!-- end list -->
 
-<!-- install.packages("regnet") -->
+    install.packages("spinBayes")
 
-<!-- ``` -->
+  - [PDF manual](https://cran.r-project.org/package=spinBayes)
 
 ## Examples
 
@@ -119,8 +138,8 @@ This package provides implementation for methods proposed in
 
 <!-- ## References -->
 
-<!-- * Wu, C., and Ma, S. (2015). A selective review of robust variable selection with applications in bioinformatics. [Briefings in Bioinformatics, 16(5), 873â€“883](http://doi.org/10.1093/bib/bbu046) -->
+<!-- * Wu, C., and Ma, S. (2015). A selective review of robust variable selection with applications in bioinformatics. [Briefings in Bioinformatics, 16(5), 873Ã¢â‚¬â€œ883](http://doi.org/10.1093/bib/bbu046) -->
 
-<!-- * Wu, C., Shi, X., Cui, Y. and Ma, S. (2015). A penalized robust semiparametric approach for gene-environment interactions. [Statistics in Medicine, 34 (30): 4016â€“4030](https://doi.org/10.1002/sim.6609) -->
+<!-- * Wu, C., Shi, X., Cui, Y. and Ma, S. (2015). A penalized robust semiparametric approach for gene-environment interactions. [Statistics in Medicine, 34 (30): 4016Ã¢â‚¬â€œ4030](https://doi.org/10.1002/sim.6609) -->
 
-<!-- * Wu, C, Jiang, Y, Ren, J, Cui, Y, Ma, S. (2018). Dissecting gene-environment interactions: A penalized robust approach accounting for hierarchical structures.[Statistics in Medicine, 37:437â€“456](https://doi.org/10.1002/sim.7518) -->
+<!-- * Wu, C, Jiang, Y, Ren, J, Cui, Y, Ma, S. (2018). Dissecting gene-environment interactions: A penalized robust approach accounting for hierarchical structures.[Statistics in Medicine, 37:437Ã¢â‚¬â€œ456](https://doi.org/10.1002/sim.7518) -->
