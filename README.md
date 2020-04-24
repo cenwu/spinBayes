@@ -13,6 +13,8 @@ status](https://travis-ci.org/jrhub/spinBayes.svg?branch=master)](https://travis
 [![CRAN](https://www.r-pkg.org/badges/version/spinBayes)](https://cran.r-project.org/package=spinBayes)
 [![Codecov test
 coverage](https://codecov.io/gh/jrhub/spinBayes/branch/master/graph/badge.svg)](https://codecov.io/gh/jrhub/spinBayes?branch=master)
+[![CRAN RStudio mirror
+downloads](http://cranlogs.r-pkg.org/badges/spinBayes)](http://www.r-pkg.org/pkg/spinBayes)
 <!-- badges: end -->
 
 Many complex diseases are known to be affected by the interactions
@@ -39,8 +41,8 @@ implemented in C++.
   - Generic functions BVSelection() and predict() make the workflow very
     simple (see ‘Examples’).
   - Highly efficient c++ implementation for MCMC algorithm.
-  - Testing coverage \>80% [![Codecov test
-    coverage](https://codecov.io/gh/jrhub/spinBayes/branch/master/graph/badge.svg)](https://codecov.io/gh/jrhub/spinBayes?branch=master)
+    <!-- * Testing coverage >80%  -->
+    <!-- [![Codecov test coverage](https://codecov.io/gh/jrhub/spinBayes/branch/master/graph/badge.svg)](https://codecov.io/gh/jrhub/spinBayes?branch=master) -->
 
 ## How to install
 
@@ -58,8 +60,6 @@ implemented in C++.
 <!-- end list -->
 
     install.packages("spinBayes")
-
-  - [PDF manual](https://cran.r-project.org/package=spinBayes)
 
 ## Examples
 
@@ -80,8 +80,11 @@ implemented in C++.
     pred = predict(spbayes, X2[test,], Z2[test,], E2[test,], clin2[test,], Y2[test,])
     pred$pmse
     # c(pred$y.pred)
+    
+    ## plot the varying effects
+    plot(spbayes)
 
-<!-- ### Binary response -->
+![](README-unnamed-chunk-2-1.png)<!-- -->![](README-unnamed-chunk-2-2.png)<!-- -->![](README-unnamed-chunk-2-3.png)<!-- -->
 
 #### Example.2 (non-structural)
 
@@ -133,8 +136,8 @@ This package provides implementation for methods proposed in
 
   - Ren, J., Zhou, F., Li, X., Chen, Q., Zhang, H., Ma, S., Jiang, Y.,
     Wu, C. (2019) Semi-parametric Bayesian variable selection for
-    gene-environment interactions.
-    [arXiv:1906.01057](https://arxiv.org/abs/1906.01057)
+    gene-environment interactions. *Statistics in Medicine* 39: 617–
+    638. <https://doi.org/10.1002/sim.8434>
 
 <!-- ## References -->
 
